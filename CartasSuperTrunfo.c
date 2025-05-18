@@ -29,21 +29,33 @@ int main() {
 struct Carta carta1, carta2;
 
     // Cadastro da primeira carta
-    prinf("Código da Carta"\n);
+    printf("Vamos cadastrar a primeira Carta \n");
+    printf("Código da Carta: \n");
     scanf("%s", carta1.codigo);
+    printf("População: \n");
     scanf("%d", &carta1.populacao);
+    printf("Área: \n");
     scanf("%f", &carta1.area);
+    printf("PIB: \n");
     scanf("%f", &carta1.pib);
+    printf("Pontos Turísticos: \n");
     scanf("%d", &carta1.pontos_turisticos);
 
     // Cadastro da segunda carta
+    printf("Vamos cadastrar a segunda Carta \n");
+    printf("Código da Carta: \n");
     scanf("%s", carta2.codigo);
+    printf("População: \n");
     scanf("%d", &carta2.populacao);
+    printf("Área: \n");
     scanf("%f", &carta2.area);
+    printf("PIB: \n");
     scanf("%f", &carta2.pib);
+    printf("Pontos Turísticos: \n");
     scanf("%d", &carta2.pontos_turisticos);
 
     // Exibição dos dados da primeira carta
+    printf("-----------------\n");
     printf("Carta 1:\n");
     printf("Código: %s\n", carta1.codigo);
     printf("População: %d\n", carta1.populacao);
