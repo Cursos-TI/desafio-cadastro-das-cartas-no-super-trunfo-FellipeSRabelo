@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas (Nível Aventureiro)
+// Tema 2 - Comparação de Cartas (Nível Novato)
 // Este programa cadastra duas cartas com informações de cidades, calcula densidade populacional e PIB per capita,
-// e exibe os dados formatados.
+// exibe os dados formatados e compara as cartas com base no atributo População.
 
 struct Carta {
     char estado;          // Letra representando o estado (ex.: A, B)
@@ -101,6 +101,21 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", carta2.pontos_turisticos);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", pib_per_capita2);
+
+    // Comparação das cartas com base no atributo População
+    printf("\n-----------------\n");
+    printf("Comparação de cartas (Atributo: População):\n");
+    printf("Carta 1 - %s (%c): %d\n", carta1.nome, carta1.estado, carta1.populacao);
+    printf("Carta 2 - %s (%c): %d\n", carta2.nome, carta2.estado, carta2.populacao);
+
+    // Determina a carta vencedora usando if-else
+    if (carta1.populacao > carta2.populacao) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", carta1.nome);
+    } else if (carta2.populacao > carta1.populacao) {
+        printf("Resultado: Carta 2 (%s) venceu!\n", carta2.nome);
+    } else {
+        printf("Resultado: Empate!\n");
+    }
 
     return 0;
 }
